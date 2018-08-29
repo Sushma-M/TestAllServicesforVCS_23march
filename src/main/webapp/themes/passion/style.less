@@ -161,9 +161,12 @@
       color: @brand-danger;
     }
 
-    .ng-touched.ng-invalid {
+    .ng-touched.ng-invalid .form-control {
       border-color: @brand-danger;
     }
+  }
+  .input-group-addon.colorpicker-container:last-child {
+    border-left: 1px solid @input-border;
   }
   .checkbox , .radio {
       padding: 0 @padding-base-horizontal;

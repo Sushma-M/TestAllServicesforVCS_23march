@@ -11,18 +11,10 @@ import java.util.Objects;
 
 public class EmployeeDepartmentHistoryId implements Serializable {
 
-    private Integer businessEntityId;
     private Date startDate;
-    private Short departmentId;
+    private Integer businessEntityId;
     private Short shiftId;
-
-    public Integer getBusinessEntityId() {
-        return this.businessEntityId;
-    }
-
-    public void setBusinessEntityId(Integer businessEntityId) {
-        this.businessEntityId = businessEntityId;
-    }
+    private Short departmentId;
 
     public Date getStartDate() {
         return this.startDate;
@@ -32,12 +24,12 @@ public class EmployeeDepartmentHistoryId implements Serializable {
         this.startDate = startDate;
     }
 
-    public Short getDepartmentId() {
-        return this.departmentId;
+    public Integer getBusinessEntityId() {
+        return this.businessEntityId;
     }
 
-    public void setDepartmentId(Short departmentId) {
-        this.departmentId = departmentId;
+    public void setBusinessEntityId(Integer businessEntityId) {
+        this.businessEntityId = businessEntityId;
     }
 
     public Short getShiftId() {
@@ -48,22 +40,30 @@ public class EmployeeDepartmentHistoryId implements Serializable {
         this.shiftId = shiftId;
     }
 
+    public Short getDepartmentId() {
+        return this.departmentId;
+    }
+
+    public void setDepartmentId(Short departmentId) {
+        this.departmentId = departmentId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof EmployeeDepartmentHistory)) return false;
         final EmployeeDepartmentHistory employeeDepartmentHistory = (EmployeeDepartmentHistory) o;
-        return Objects.equals(getBusinessEntityId(), employeeDepartmentHistory.getBusinessEntityId()) &&
-                Objects.equals(getStartDate(), employeeDepartmentHistory.getStartDate()) &&
-                Objects.equals(getDepartmentId(), employeeDepartmentHistory.getDepartmentId()) &&
-                Objects.equals(getShiftId(), employeeDepartmentHistory.getShiftId());
+        return Objects.equals(getStartDate(), employeeDepartmentHistory.getStartDate()) &&
+                Objects.equals(getBusinessEntityId(), employeeDepartmentHistory.getBusinessEntityId()) &&
+                Objects.equals(getShiftId(), employeeDepartmentHistory.getShiftId()) &&
+                Objects.equals(getDepartmentId(), employeeDepartmentHistory.getDepartmentId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getBusinessEntityId(),
-                getStartDate(),
-                getDepartmentId(),
-                getShiftId());
+        return Objects.hash(getStartDate(),
+                getBusinessEntityId(),
+                getShiftId(),
+                getDepartmentId());
     }
 }

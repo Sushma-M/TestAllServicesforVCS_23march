@@ -34,4 +34,3 @@ public class VemployeeDepartmentHistoryDao extends WMGenericDaoImpl<VemployeeDep
         return this.template;
     }
 }
-

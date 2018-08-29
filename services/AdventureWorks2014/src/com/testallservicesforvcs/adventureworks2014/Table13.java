@@ -69,4 +69,3 @@ public class Table13 implements Serializable {
         return Objects.hash(getId());
     }
 }
-

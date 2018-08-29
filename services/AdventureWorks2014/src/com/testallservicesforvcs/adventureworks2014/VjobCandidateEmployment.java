@@ -180,4 +180,3 @@ public class VjobCandidateEmployment implements Serializable {
                 getEmp_loc_city());
     }
 }
-

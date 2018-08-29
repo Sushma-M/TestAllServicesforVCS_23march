@@ -33,4 +33,3 @@ public class ShiftDao extends WMGenericDaoImpl<Shift, Short> {
         return this.template;
     }
 }
-

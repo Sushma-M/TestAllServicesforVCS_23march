@@ -33,4 +33,3 @@ public class Table13Dao extends WMGenericDaoImpl<Table13, Integer> {
         return this.template;
     }
 }
-

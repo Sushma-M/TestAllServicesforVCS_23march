@@ -750,6 +750,7 @@
       "sourceTable" : "VACATION",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "EMPLOYEE",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "PUBLIC",
@@ -1270,6 +1271,7 @@
       "sourceTable" : "EMPLOYEE",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "DEPARTMENT",
+      "valid" : true,
       "virtual" : false
     }, {
       "cardinality" : "ManyToOne",
@@ -1301,6 +1303,7 @@
       "sourceTable" : "EMPLOYEE",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "EMPLOYEE",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "PUBLIC",

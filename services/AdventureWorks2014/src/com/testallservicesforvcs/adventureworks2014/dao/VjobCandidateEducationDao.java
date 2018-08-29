@@ -34,4 +34,3 @@ public class VjobCandidateEducationDao extends WMGenericDaoImpl<VjobCandidateEdu
         return this.template;
     }
 }
-

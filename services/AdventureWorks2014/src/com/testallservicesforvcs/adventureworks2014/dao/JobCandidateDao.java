@@ -33,4 +33,3 @@ public class JobCandidateDao extends WMGenericDaoImpl<JobCandidate, Integer> {
         return this.template;
     }
 }
-

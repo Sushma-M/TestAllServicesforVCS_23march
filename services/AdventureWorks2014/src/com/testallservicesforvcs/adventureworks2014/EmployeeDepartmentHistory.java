@@ -31,25 +31,15 @@ import org.hibernate.annotations.FetchMode;
 @IdClass(EmployeeDepartmentHistoryId.class)
 public class EmployeeDepartmentHistory implements Serializable {
 
-    private Integer businessEntityId;
     private Date startDate;
-    private Short departmentId;
+    private Integer businessEntityId;
     private Short shiftId;
+    private Short departmentId;
     private Date endDate;
     private LocalDateTime modifiedDate;
     private Department department;
     private Employee employee;
     private Shift shift;
-
-    @Id
-    @Column(name = "`BusinessEntityID`", nullable = false, scale = 0, precision = 10)
-    public Integer getBusinessEntityId() {
-        return this.businessEntityId;
-    }
-
-    public void setBusinessEntityId(Integer businessEntityId) {
-        this.businessEntityId = businessEntityId;
-    }
 
     @Id
     @Column(name = "`StartDate`", nullable = false)
@@ -62,13 +52,13 @@ public class EmployeeDepartmentHistory implements Serializable {
     }
 
     @Id
-    @Column(name = "`DepartmentID`", nullable = false, scale = 0, precision = 5)
-    public Short getDepartmentId() {
-        return this.departmentId;
+    @Column(name = "`BusinessEntityID`", nullable = false, scale = 0, precision = 10)
+    public Integer getBusinessEntityId() {
+        return this.businessEntityId;
     }
 
-    public void setDepartmentId(Short departmentId) {
-        this.departmentId = departmentId;
+    public void setBusinessEntityId(Integer businessEntityId) {
+        this.businessEntityId = businessEntityId;
     }
 
     @Id
@@ -79,6 +69,16 @@ public class EmployeeDepartmentHistory implements Serializable {
 
     public void setShiftId(Short shiftId) {
         this.shiftId = shiftId;
+    }
+
+    @Id
+    @Column(name = "`DepartmentID`", nullable = false, scale = 0, precision = 5)
+    public Short getDepartmentId() {
+        return this.departmentId;
+    }
+
+    public void setDepartmentId(Short departmentId) {
+        this.departmentId = departmentId;
     }
 
     @Column(name = "`EndDate`", nullable = true)
@@ -149,18 +149,17 @@ public class EmployeeDepartmentHistory implements Serializable {
         if (this == o) return true;
         if (!(o instanceof EmployeeDepartmentHistory)) return false;
         final EmployeeDepartmentHistory employeeDepartmentHistory = (EmployeeDepartmentHistory) o;
-        return Objects.equals(getBusinessEntityId(), employeeDepartmentHistory.getBusinessEntityId()) &&
-                Objects.equals(getStartDate(), employeeDepartmentHistory.getStartDate()) &&
-                Objects.equals(getDepartmentId(), employeeDepartmentHistory.getDepartmentId()) &&
-                Objects.equals(getShiftId(), employeeDepartmentHistory.getShiftId());
+        return Objects.equals(getStartDate(), employeeDepartmentHistory.getStartDate()) &&
+                Objects.equals(getBusinessEntityId(), employeeDepartmentHistory.getBusinessEntityId()) &&
+                Objects.equals(getShiftId(), employeeDepartmentHistory.getShiftId()) &&
+                Objects.equals(getDepartmentId(), employeeDepartmentHistory.getDepartmentId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getBusinessEntityId(),
-                getStartDate(),
-                getDepartmentId(),
-                getShiftId());
+        return Objects.hash(getStartDate(),
+                getBusinessEntityId(),
+                getShiftId(),
+                getDepartmentId());
     }
 }
-

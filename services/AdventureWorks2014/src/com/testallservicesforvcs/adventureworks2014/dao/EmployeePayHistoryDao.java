@@ -34,4 +34,3 @@ public class EmployeePayHistoryDao extends WMGenericDaoImpl<EmployeePayHistory, 
         return this.template;
     }
 }
-

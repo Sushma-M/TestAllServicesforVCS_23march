@@ -114,4 +114,3 @@ public class EmployeePayHistory implements Serializable {
                 getRateChangeDate());
     }
 }
-

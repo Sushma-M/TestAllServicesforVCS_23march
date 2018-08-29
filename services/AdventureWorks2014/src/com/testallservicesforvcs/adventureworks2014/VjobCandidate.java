@@ -245,4 +245,3 @@ public class VjobCandidate implements Serializable {
                 getModifiedDate());
     }
 }
-

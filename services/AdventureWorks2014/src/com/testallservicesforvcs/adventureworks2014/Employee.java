@@ -249,4 +249,3 @@ public class Employee implements Serializable {
         return Objects.hash(getBusinessEntityId());
     }
 }
-

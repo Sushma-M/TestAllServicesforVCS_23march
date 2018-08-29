@@ -105,9 +105,7 @@ public class Shift implements Serializable {
     @PostPersist
     public void onPostPersist() {
         if(employeeDepartmentHistories != null) {
-            for(EmployeeDepartmentHistory employeeDepartmentHistory : employeeDepartmentHistories) {
-                employeeDepartmentHistory.setShift(this);
-            }
+            employeeDepartmentHistories.forEach(_employeeDepartmentHistory -> _employeeDepartmentHistory.setShift(this));
         }
     }
 
@@ -124,4 +122,3 @@ public class Shift implements Serializable {
         return Objects.hash(getShiftId());
     }
 }
-

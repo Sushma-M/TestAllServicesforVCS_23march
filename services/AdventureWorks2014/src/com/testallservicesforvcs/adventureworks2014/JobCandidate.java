@@ -102,4 +102,3 @@ public class JobCandidate implements Serializable {
         return Objects.hash(getJobCandidateId());
     }
 }
-

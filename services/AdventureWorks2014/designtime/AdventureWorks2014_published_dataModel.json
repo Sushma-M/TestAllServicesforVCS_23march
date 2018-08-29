@@ -887,6 +887,7 @@
       "sourceTable" : "EmployeeDepartmentHistory",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "Department",
+      "valid" : true,
       "virtual" : false
     }, {
       "cardinality" : "ManyToOne",
@@ -918,6 +919,7 @@
       "sourceTable" : "EmployeeDepartmentHistory",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "Employee",
+      "valid" : true,
       "virtual" : false
     }, {
       "cardinality" : "ManyToOne",
@@ -949,6 +951,7 @@
       "sourceTable" : "EmployeeDepartmentHistory",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "Shift",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "HumanResources",
@@ -1150,6 +1153,7 @@
       "sourceTable" : "EmployeePayHistory",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "Employee",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "HumanResources",
@@ -1322,6 +1326,7 @@
       "sourceTable" : "JobCandidate",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "Employee",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "HumanResources",

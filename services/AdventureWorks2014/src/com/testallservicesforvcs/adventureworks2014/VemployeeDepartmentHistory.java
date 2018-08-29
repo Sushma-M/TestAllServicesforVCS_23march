@@ -180,4 +180,3 @@ public class VemployeeDepartmentHistory implements Serializable {
                 getEndDate());
     }
 }
-

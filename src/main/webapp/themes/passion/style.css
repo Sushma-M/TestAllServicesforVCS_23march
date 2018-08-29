@@ -6840,8 +6840,11 @@ button.wm-app .close {
 .wm-app .form-group .control-label.text-danger {
   color: #db524b;
 }
-.wm-app .form-group .ng-touched.ng-invalid {
+.wm-app .form-group .ng-touched.ng-invalid .form-control {
   border-color: #db524b;
+}
+.wm-app .input-group-addon.colorpicker-container:last-child {
+  border-left: 1px solid #7b7b7b;
 }
 .wm-app .checkbox,
 .wm-app .radio {

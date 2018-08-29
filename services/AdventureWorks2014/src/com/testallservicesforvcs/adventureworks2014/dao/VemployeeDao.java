@@ -34,4 +34,3 @@ public class VemployeeDao extends WMGenericDaoImpl<Vemployee, VemployeeId> {
         return this.template;
     }
 }
-

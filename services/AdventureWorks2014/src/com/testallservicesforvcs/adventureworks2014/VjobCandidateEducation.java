@@ -206,4 +206,3 @@ public class VjobCandidateEducation implements Serializable {
                 getEdu_loc_city());
     }
 }
-
